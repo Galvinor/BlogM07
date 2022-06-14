@@ -28,8 +28,6 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $user=Auth::user();
-        // $posts=$user->posts();
-        // ddd($user);
         $posts=Post::all();
         $replies=Reply::all();
         $users=User::all('id','username');

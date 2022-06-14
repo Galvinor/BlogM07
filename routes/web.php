@@ -18,9 +18,6 @@ use App\User;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', function () {
     $array=['name'=>"Arturo"];
@@ -45,8 +42,6 @@ Route::get('/about',function(){
 
 Auth::routes();
 
-
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/posts','PostController@index')->name('posts');
@@ -65,24 +60,4 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 
 Route::get('/admin', 'AdminController@index')->name('admin');
-
-
-// Route::get('posts/{post?}',function ($id=null){
-//     if($id==null){
-//         return Post::all();
-//     }
-//     $post=Post::find($id);
-//     return $post;
-// })->where ('post','[0-9]+');
-
-// Route::middleware(['auth','role:admin'])->prefix('admin')->group(function(){
-//     Route::get('/users', function () {
-//         //$users=User::all();
-//         return"admin....users.";
-
-//     })->name('admin.users');
-//     Route::get('/posts',function(){
-//         return"admin......posts.";
-//     })->name('admin.posts');
-// });
 
